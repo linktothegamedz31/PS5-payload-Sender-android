@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ps5_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Primary Payloads Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/ps5_accent"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Primary Payloads"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ps5_blue"
+                    android:layout_marginBottom="8dp"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="4">
+
+                    <Button
+                        android:id="@+id/btn_send_etahen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send etaHEN"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    <Button
+                        android:id="@+id/btn_send_kstuff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send Kstuff"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    
+                    <Button
+                        android:id="@+id/btn_send_umtx1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send UMTX1"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    <Button
+                        android:id="@+id/btn_send_elfloader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send ELF Loader"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    <Button
+                        android:id="@+id/btn_send_umtx2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send UMTX2"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    <Button
+                        android:id="@+id/btn_send_websrv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send WebSrv"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+
+                    <Button
+                        android:id="@+id/btn_send_kstuff_toggle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Send Kstuff Toggle"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Custom Payload Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/ps5_accent"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Custom Payload"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ps5_blue"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btn_select_custom_payload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select File"
+                        android:backgroundTint="@color/ps5_blue"
+                        android:textColor="@color/ps5_text"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_selected_file"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No file selected"
+                        android:textColor="@color/ps5_text"
+                        android:ellipsize="end"
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_send_custom_payload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Custom Payload"
+                    android:backgroundTint="@color/ps5_blue"
+                    android:textColor="@color/ps5_text"
+                    android:enabled="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

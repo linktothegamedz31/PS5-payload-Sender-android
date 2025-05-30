@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PS5 Payload Sender</string>
+    <string name="tab_primary_payloads">Primary Payloads</string>
+    <string name="tab_secondary_payloads">Secondary Payloads</string>
+</resources>
